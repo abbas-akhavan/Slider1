@@ -1,0 +1,207 @@
+$orientation: screen;
+$mobile: 480px;
+$tablet: 698px;
+$laptop: 992px;
+$screen: 1200px;
+@function orientation() {
+    @if ($orientation == 'screen') {
+        @return 'max-width';
+    }
+
+    @if ($orientation == 'mobile') {
+        @return 'min-width'
+    }
+}
+
+@mixin media($arg) {
+    @media (orientation(): $arg) {
+        @content
+    }
+}
+
+$get-up: #d50c52;
+$coolOrange: #FEC715;
+$orangeButtonText: rgb(74, 74, 228);
+$SHADOW: 3px 3px 5px rgba(16,16, 16, .75);
+$SHADOW-LIGHT: 3px 3px 5px rgba(16, 16, 16, 0.301);
+$sideMenuLength: 230px;
+$headerWhiteText: rgb(247, 247, 247);
+$themeBlue: #1d71b9;
+$themeBlueLight: #149bd9;
+$themeBlueDark: #0d72a1;
+$themePurple: #d50c52;
+$sec-blue: #1d3bbb;
+$fontcolor: #42515a;
+$fontcolor-light: #fbfbfb;
+$main-blue: #02cde7;
+$main-darkblue: #326ba4;
+$sec-blue: #1d3bbb;
+$bg-color: #fff;
+$gray: #b1b1b1;
+$red: #f3502b;
+$green: #4ce579;
+$blue: #85c9f6;
+$black: #000;
+$yellow: #fdc220;
+$redLight: #ff928b;
+$grayBtween: #828282;
+$blue-light: #12ace7;
+$blue-light-title: #00b0f3;
+$purple-strong: #DA007F;
+$body: #535353; //#8d8d8d;
+$gray-light: #bfbfbf;
+$collapsable-back: rgb(223, 223, 223);
+$collapsable-hover: #b1b1b1;
+$collapsable-border: #b9b9b9;
+$get-up: #DA007F;
+$theme-lightBlue: #02cde7;
+$theme-hardBlue: #1d3bbb;
+$font-title: 25px;
+$font-body: 16px;
+$grey-background: #E7E7E7;
+$main-panel-shadow: 7px 7px 15px rgba(89,86,86, .15);
+$title: #E30613;
+$body: #4B4B4B;
+$subtitle: #1D71B8;
+$section: #1D71B8;
+$ads-panel-background: #F2F2F2;
+$ads-panel-shadow: 2px 2px 2px rgba(86,86,86,.4);
+$ads-panel-border: #A8A8A8;
+$projectBox-text: #0063CC;
+$projectBox-border: #c4e0ff;
+$workshop-border: #D1921A;
+$lightBlue-background: #D9EBFC;
+$lightBlue-title: #C41835;
+$lightBlue-body: #445B72;
+$audience-title: #E6007E;
+$signup-button: #FF5000;
+$orange: #F9B233;
+$blue: #009EC1;
+$red: #E94E1B;
+$green: #00A19A;
+$blue-outside: #1D71B8;
+$resCircle-orange: #FFC000;
+$dark_color: #221F2E;
+$light_color: #f3f6fd;
+$main: #3f51b5;
+$color1: #00355f;
+$color2: #004b80;
+$color3: #1595d3;
+$purple: #2e2b3f;
+$pink: #5f5963;
+$colorbox1: #6200ff;
+$colorbox2: #f2e336;
+$colorbox3: #14E692;
+$colorbox4: #cceab3;
+$red: #f3502b;
+$green: #4ce579;
+$blue: #85c9f6;
+$font: 16px;
+$footerBackground: #444444;
+$footerOrangeLine: #FF7A18;
+$footerWhiteText: #FFFFED;
+$footerWhiteLine: #FFFFED;
+$footerEmailInputBackground: #DEDEDE;
+$footerEmailInputColor: #757575;
+$EnamadShadow: 4px 4px 5px #3A3937;
+$Enamad-border: #333333;
+$fontScale: 1.95;
+$coolOrange: #FEC715;
+$orangeButtonText: rgb(74, 74, 228);
+$SHADOW: 3px 3px 5px rgba(16,16, 16, .75);
+$SHADOW-LIGHT: 3px 3px 5px rgba(16, 16, 16, 0.301);
+$greyMain-background: #f6f6f6;
+$greyDark-background: #ededed;
+$sideMenuLength: 200px;
+$headerWhiteText: rgb(247, 247, 247);
+$themeBlue: #1d71b9;
+$themeBlueLight: #149bd9;
+$themeBlueDark: #0d72a1;
+$themePurple: #d50c52;
+$slider-shadow: 0px 0px 41px rgba(0, 0, 0,.38);
+$atnaHost-blue: #64abe9;
+$atnaHost-orange: #f58232;
+$fourStepsBoxGradient: (#fbfbfb, white);
+$fourStepsBoxShadow: 0px 0px 21px rgba(0, 0, 0,.24);
+$footerBackground: #444444;
+$footerOrangeLine: #FF7A18;
+$footerWhiteText: #FFFFED;
+$footerWhiteLine: #FFFFED;
+$footerEmailInputBackground: #DEDEDE;
+$footerEmailInputColor: #757575;
+$EnamadShadow: 4px 4px 5px #3A3937;
+$Enamad-border: #333333;
+$fontScale: 2;
+$calendarYellow: #fea702;
+$calendarButtonRed: #be1623;
+/*---------------MIXINS & FUNCTIONS--------------------------*/
+@function letterSpace($unit) {
+    $result: $unit / 25;
+    @return $result;
+}
+
+@mixin flex($just, $align, $dir: row, $gap: 0) {
+    display: flex;
+
+    @if $just == c {
+        $just: center;
+    }
+
+    @if $just == s {
+        $just: flex-start;
+    }
+
+    @if $just == e {
+        $just: flex-end;
+    }
+
+    @if $just == sa {
+        $just: space-around;
+    }
+
+    @if $just == sb {
+        $just: space-between;
+    }
+
+    @if $just == se {
+        $just: space-evenly;
+    }
+
+    @if $align == c {
+        $align: center;
+    }
+
+    @if $align == s {
+        $align: flex-start;
+    }
+
+    @if $align == e {
+        $align: flex-end;
+    }
+
+    justify-content: $just;
+    align-items: $align;
+    flex-direction: $dir;
+    gap: $gap;
+}
+
+@mixin square($item) {
+    width: $item;
+    height: $item;
+}
+
+@mixin scalePics($width, $height, $scale) {
+    width: $width / $scale;
+    height: $height / $scale;
+}
+
+@mixin fontAwsome($uni, $weight) {
+    content: #{"\"\\"}#{$uni + "\""};
+    font-family: "Font Awesome 5 Free";
+    font-weight: $weight;
+}
+@mixin touchFeedback() {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*---------------MIXINS & FUNCTIONS--------------------------*/
