@@ -1,7 +1,12 @@
 //modal
 (function () {
-    const modal = dc.query('#modal');
-    modal.content = modal.query('.content');
+    //create html needed
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.content = document.createElement('div');
+    modal.content.classList.add('content');
+    modal.appendChild(modal.content);
+    document.body.appendChild(modal);
 
     function scrollLockClousure() {
         let currentPos;

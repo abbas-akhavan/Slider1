@@ -1,0 +1,85 @@
+﻿/*@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 100;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Thin.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Thin.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Thin.ttf') format('ttf');
+}*/
+
+/*@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 200;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-UltraLight.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-UltraLight.woff') format('woff'),url('Font/IRANSansWeb/ttf/IRANSansXFaNum-UltraLight.ttf') format('ttf');
+}*/
+
+@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 300;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Light.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Light.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Light.ttf') format('ttf'),;
+}
+
+@font-face {
+    font-family: yekanBakh;
+    font-style: normal;
+    font-weight: 300;
+    src: url('Font/YekanBakhFaNum/YekanBakhFaNum-Light.woff2') format('woff2'), url('Font/YekanBakhFaNum/YekanBakhFaNum-Light.woff') format('woff'), url('Font/YekanBakhFaNum/YekanBakhFaNum-Light.ttf') format('ttf'),;
+}
+
+@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 500;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Medium.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Medium.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Medium.ttf') format('ttf');
+}
+
+/*@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 600;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-DemiBold.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-DemiBold.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-DemiBold.ttf') format('ttf');
+}*/
+
+/*@font-face {
+    font-family: IRANSansX;
+    font-style: normal;
+    font-weight: 800;
+    src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-ExtraBold.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-ExtraBold.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-ExtraBold.ttf') format('ttf');
+}*/
+
+// @font-face {
+//     font-family: IRANSansX;
+//     font-style: normal;
+//     font-weight: 900;
+//     src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Black.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Black.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Black.ttf') format('ttf');
+// }
+@font-face {
+    font-family: yekanBakh;
+    font-style: normal;
+    font-weight: 900;
+    src: url('Font/YekanBakhFaNum/woff2/YekanBakhFaNum-Black.woff2') format('woff2'), url('Font/YekanBakhFaNum/woff/YekanBakhFaNum-Black.woff') format('woff'), url('Font/YekanBakhFaNum/ttf/YekanBakhFaNum-Black.ttf') format('ttf');
+}
+// @font-face {
+//     font-family: IRANSansX;
+//     font-style: normal;
+//     font-weight: bold;
+//     src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Bold.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Bold.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Bold.ttf') format('ttf');
+// }
+@font-face {
+    font-family: yekanBakh;
+    font-style: normal;
+    font-weight: bold;
+    src: url('Font/YekanBakhFaNum/woff2/YekanBakhFaNum-ExtraBold.woff2') format('woff2'), url('Font/YekanBakhFaNum/woff/YekanBakhFaNum-ExtraBold.woff') format('woff'), url('Font/YekanBakhFaNum/ttf/YekanBakhFaNum-ExtraBold.ttf') format('ttf');
+}
+// @font-face {
+//    font-family: yekanBakh;
+//     font-style: normal;
+//     font-weight: normal;
+//     src: url('Font/IRANSansWeb/woff2/IRANSansXFaNum-Regular.woff2') format('woff2'), url('Font/IRANSansWeb/woff/IRANSansXFaNum-Regular.woff') format('woff'), url('Font/IRANSansWeb/ttf/IRANSansXFaNum-Regular.ttf') format('ttf');
+// }
+@font-face {
+    font-family: yekanBakh;
+    font-style: normal;
+    font-weight: normal;
+    src: url('Font/YekanBakhFaNum/woff2/YekanBakhFaNum-Regular.woff2') format('woff2'), url('Font/YekanBakhFaNum/woff/YekanBakhFaNum-Regular.woff') format('woff'), url('Font/YekanBakhFaNum/ttf/YekanBakhFaNum-Regular.ttf') format('ttf');
+}

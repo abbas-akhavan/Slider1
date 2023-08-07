@@ -1,0 +1,353 @@
+﻿@import '../../source/Variables';
+
+h2,
+.title {
+    color: var(--h2);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3,
+.subtitle {
+    color: var(--h3);
+    font-weight: 600;
+    font-size: 0.96rem;
+}
+
+h4,
+h5,
+h6 {
+    color: var(--h4);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.body,
+p,
+ol,
+ul {
+    line-height: 1.6rem;
+    color: var(--p);
+    font-size: 0.95rem;
+    text-align: justify;
+
+    a:not([href^="#"]) {
+        color: #fc6542;
+
+        &.normal {
+            color: inherit;
+        }
+    }
+}
+
+b,
+.bold {
+    font-weight: 900;
+}
+
+strong {
+    font-weight: inherit;
+}
+
+ul,
+ol {
+    li {
+        /*margin-right: 1.1rem;*/
+        list-style-type: none;
+    }
+
+    &.disk li {
+        margin-right: 0.9rem;
+        list-style-type: disc;
+    }
+}
+
+ol li {
+    list-style-type: decimal;
+    margin-right: 1.7rem;
+}
+
+li:last-child {
+    margin-bottom: 2em;
+}
+
+img {
+    max-width: 28rem;
+    max-height: 25rem;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    display: block;
+    width: auto;
+    box-shadow: 2px 2px 7px #0000003b;
+    transition: .2s;
+
+    +span {
+        display: block;
+        text-align: center;
+        padding: .5em;
+        color: red;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+
+    .fullscreen {
+        max-width: unset;
+        width: 100%;
+        max-height: unset;
+    }
+
+    &:not(.unclickable) {
+        cursor: pointer;
+
+        &:hover,
+        .active {
+            box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.44);
+        }
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 57rem;
+    display: block;
+    margin: 2rem auto;
+    box-shadow: 2px 2px 7px rbga(0,0,0,.231372549);
+    border-radius: .5rem;
+}
+
+blockquote {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: .3em;
+    border-right: 0.4em solid var(--h3);
+    font-weight: 700;
+    padding: 3em;
+    position: relative;
+    max-width: 50em;
+    margin: auto;
+    line-height: 2em;
+
+    &::before {
+        content: ",,";
+        position: absolute;
+        top: 0.2em;
+        font-size: 2.2em;
+        right: 0.8em;
+    }
+
+    @include media($mobile) {
+        font-size: 0.85rem;
+    }
+}
+
+ins {
+    text-decoration: none;
+    font-size: .85rem;
+    background: #f9f9f9;
+    display: block;
+    border-right: .3em solid;
+    padding: 1.3em;
+    border-image: linear-gradient(#f9f9f9 25%, var(--h3) 25%, var(--h3) 75%, #f9f9f9 75%);
+    border-image-slice: 1;
+    border-radius: 0.7em;
+}
+
+hr {
+    width: 80%;
+    height: 1px;
+    background-color: #d3d3d3;
+    margin: 5em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+    &::before {
+        content: ",,";
+        background: white;
+        font-size: 4em;
+        padding: 0 0.9em;
+        position: relative;
+        bottom: 0.2em;
+    }
+}
+
+mark {
+    &.left {
+        padding-right: 0.5em;
+        margin-right: .5em;
+        float: left;
+        border-right: 0.25em solid black;
+
+    }
+
+    color: var(--h2);
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: none;
+    max-width: 50%;
+    text-align: justify;
+
+    &.right {
+        padding-left: 0.5em;
+        margin-left: .5em;
+        float: right;
+        border-left: 0.25em solid black;
+    }
+}
+
+.myTable {
+    display: block;
+    margin: auto;
+    border: .2rem solid rgb(236, 236, 236);
+    border-radius: .4rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    width: max-content;
+    overflow-x: auto;
+    max-width: 100%;
+
+    .tr {
+        display: table-row;
+
+        &.head {
+            background-color: #348edc;
+            color: white;
+            font-weight: bold;
+
+
+
+
+
+            td {
+                font-size: 1.1rem;
+                padding: 0.7rem 1.3rem;
+            }
+        }
+
+        &:nth-child(2n) {
+            background: #f9f9f9;
+        }
+    }
+
+    .td-En {
+        direction: ltr;
+        border-left: .1em solid #ececec;
+        display: table-cell;
+        padding: 0.7rem 1rem;
+        text-align: center;
+    }
+
+    .td {
+        display: table-cell;
+        padding: 0.7rem 1rem;
+        text-align: center;
+
+        &.justify {
+            text-align: justify;
+        }
+    }
+
+    &.vertical {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+
+        .td {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@import './collage';
+
+.TipBox,
+.tipBox {
+    border: 2px solid #ecae00;
+    background-color: #fff2cf;
+    border-radius: 5px;
+    margin: 3rem 0;
+    margin-top: 5rem;
+    position: relative;
+    font-size: 1.3rem;
+    padding: 1rem 1.2rem;
+    padding-top: 2.5rem;
+
+    &::before {
+        content: '';
+        background-image: url("/Content/images/img/qu.png");
+        width: 3.8rem;
+        height: 3.9rem;
+        display: block;
+        position: absolute;
+        right: 0.2rem;
+        top: -2.2rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+        color: #f09000;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 1rem;
+
+        img {
+            display: none
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    img[src*=tip] {
+        display: none
+    }
+}
+
+.attention {
+    background: radial-gradient(silver, #e2e2e2, #fff);
+    border: .1em solid #cecece;
+    padding: 2em;
+    border-radius: 1.2em;
+    padding-top: 1em;
+
+    span {
+        color: var(--h2);
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        font-size: 1.3rem;
+        margin-bottom: 1.5em;
+    }
+}
+
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+.title,
+.subtitle,
+.h4,
+ins,
+blockquote,
+.body {
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@include media($mobile) {
+    img {
+        width: 100%;
+    }
+}

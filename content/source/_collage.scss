@@ -1,0 +1,60 @@
+﻿.collage {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 1%;
+    margin-bottom: 5em;
+
+    &.one-two {
+        grid-template-columns: 59% 40%;
+
+        &.reverse {
+            grid-template-columns: 40% 59%;
+        }
+    }
+
+    &.three {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    &.four {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    &.five {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    img {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.515));
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 0;
+
+        &::before {
+            content: attr(data-title);
+        }
+
+        + span {
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 698px) {
+        &.two-sm {
+            grid-template-columns: repeat(2, auto);
+        }
+
+        &.three-sm {
+            grid-template-columns: repeat(3, auto);
+        }
+
+        &.four-sm {
+            grid-template-columns: repeat(4, auto);
+        }
+
+        &.five-sm {
+            grid-template-columns: repeat(5, auto);
+        }
+    }
+}
