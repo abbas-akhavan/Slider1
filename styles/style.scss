@@ -1,0 +1,124 @@
+@use "../content/source/Variables" as v;
+
+body {
+    padding-top: 90px;
+  padding-bottom: 1000px;
+}
+.sliderContainer{
+  width: 100%;
+  padding: 0 2em;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: 1em;
+
+  > .slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    /* transition: all .5s; */
+
+    > img {
+      width: 100%;
+    }
+
+    > a {
+      position: absolute;
+      display: inline-block;
+      color: #727272;
+      padding: 0.3em 1em;
+      background-color: white;
+      bottom: 1em;
+      left: 1em;
+      border-radius: 1.5em;
+      font-weight: bold;
+      font-size: 1.3em;
+      cursor: pointer;
+    }
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.8em;
+    height: 4.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000023;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  > .next {
+    left: 0;
+    border-radius: 0 0.8em 0.8em 0;
+  }
+  > .prev {
+    right: 0;
+    border-radius: 0.8em 0 0 0.8em;
+  }
+  > .next:hover,
+  > .prev:hover {
+    background-color: #0000002f;
+  }
+  > .dots {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    > .dot {
+      width: 1em;
+      height: 1em;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .3s;
+    }
+    > .dot:hover {
+      background-color: white;
+    }
+    > .active-dot {
+      background-color: white;
+    }
+  }
+
+  @include v.media(v.$screen){
+    
+  }
+  @include v.media(v.$tablet){
+    > .next , > .prev{
+      font-size: 1em;
+    }
+
+    > .slide{
+      > a{
+        font-size: .9em;
+        border-radius: 1.7em;
+      }
+    }
+  }
+  @include v.media(v.$mobile){
+    > .next , > .prev{
+      font-size: .8em;
+    }
+
+    > .slide{
+      > a{
+        font-size: .7em;
+        border-radius: 2.1em;
+        padding: 0 1em;
+      }
+    }
+  }
+}

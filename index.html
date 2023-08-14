@@ -12,7 +12,34 @@
   </head>
   <body>
     
-    <h1>سالم</h1>
+    <div class="sliderContainer">
+      <div class="slider" data-currentSlide="0">
+        <div class="slide">
+          <img src="images/img1.jpg" alt="" />
+          <a href="#">مشاهده بیشتر</a>
+        </div>
+        <div class="slide">
+          <img src="images/img2.jpg" alt="" />
+          <a href="#">مشاهده بیشتر</a>
+        </div>
+        <div class="slide">
+          <img src="images/img3.jpg" alt="" />
+          <a href="#">مشاهده بیشتر</a>
+        </div>
+        <div class="slide">
+          <img src="images/img4.jpg" alt="" />
+          <a href="#">مشاهده بیشتر</a>
+        </div>
+        <span class="next"><span class="fa fa-chevron-left"></span></span>
+        <span class="prev"><span class="fa fa-chevron-right"></span></span>
+        <div class="dots">
+          <span class="dot active-dot" data-targetSlide="0"></span>
+          <span class="dot" data-targetSlide="1"></span>
+          <span class="dot" data-targetSlide="2"></span>
+          <span class="dot" data-targetSlide="3"></span>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./content/lib/Jquery/jquery-1.11.3.min.js"></script>
     <script type="module" src="./content/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
